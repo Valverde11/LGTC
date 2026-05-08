@@ -1,22 +1,7 @@
-package logistec.algorithms;
+package algorithms;
 
-import logistec.graph.Graph;
+import graph.Graph;
 
-/**
- * Floyd-Warshall all-pairs shortest path algorithm.
- *
- * <p>Computes the minimum distance between every pair of vertices using
- * dynamic programming. Result is a V×V distance matrix D where D[i][j]
- * is the shortest path length from i to j.
- *
- * <p>In LogísTEC this matrix is used to pre-compute distances between
- * the depot and all delivery stops, feeding the routing heuristics.
- *
- * <p>Complexity: O(V³) time, O(V²) space.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
 public class FloydWarshall {
 
     private static final int INF = Integer.MAX_VALUE / 2;
@@ -25,11 +10,7 @@ public class FloydWarshall {
     private final int[][] next;   // next[i][j] = first step on path i → j
     private final int     V;
 
-    /**
-     * Run Floyd-Warshall on graph {@code g}.
-     *
-     * @param g undirected weighted graph
-     */
+
     public FloydWarshall(Graph g) {
         this.V    = g.numVertices();
         this.dist = g.adjacencyMatrix(); // initialised with edge weights / INF / 0

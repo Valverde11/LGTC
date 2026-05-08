@@ -1,13 +1,11 @@
-package logistec;
 
-import logistec.algorithms.*;
-import logistec.graph.*;
-import logistec.io.*;
-import logistec.planner.Planner;
-import logistec.ui.MainWindow;
-import logistec.util.LinkedList;
-
+import algorithms.*;
+import graph.*;
+import io.*;
 import javax.swing.*;
+import planner.Planner;
+import ui.MainWindow;
+import util.LinkedList;
 
 /**
  * LogísTEC — Entry point.

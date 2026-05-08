@@ -1,34 +1,16 @@
-package logistec.algorithms;
+package algorithms;
 
-import logistec.graph.Graph;
-import logistec.util.LinkedList;
-import logistec.util.Queue;
-import logistec.util.Stack;
+import graph.Graph;
+import util.LinkedList;
+import util.Queue;
+import util.Stack;
 
-/**
- * Graph traversal algorithms: BFS and DFS.
- *
- * <p>Both algorithms run in O(V + E).
- *
- * @author LogísTEC Team
- * @version 1.0
- */
 public class GraphTraversal {
 
     private GraphTraversal() {} // utility class
 
     // ── BFS ──────────────────────────────────────────────────────────────────
 
-    /**
-     * Breadth-First Search from source vertex {@code src}.
-     * <p>
-     * Visits vertices in order of increasing edge count from src.
-     * Uses a FIFO queue.
-     *
-     * @param  g   the graph
-     * @param  src source vertex index
-     * @return list of vertex indices in BFS visit order
-     */
     public static LinkedList<Integer> bfs(Graph g, int src) {
         int V = g.numVertices();
         boolean[] visited = new boolean[V];

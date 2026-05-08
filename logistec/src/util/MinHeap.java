@@ -1,24 +1,5 @@
-package logistec.util;
+package util;
 
-/**
- * Generic min-heap Priority Queue.
- * <p>
- * Required by the project spec — replaces {@code java.util.PriorityQueue}.
- * Used by Dijkstra and Prim.
- *
- * <p>Complexity:
- * <ul>
- *   <li>insert        – O(log n)</li>
- *   <li>extractMin    – O(log n)</li>
- *   <li>decreaseKey   – O(n) scan + O(log n) sift — acceptable for course scope</li>
- *   <li>peek / isEmpty – O(1)</li>
- * </ul>
- *
- * @param <T> element type (must be comparable if natural ordering is used,
- *            otherwise pass a key via {@code insert(T, double)})
- * @author LogísTEC Team
- * @version 1.0
- */
 public class MinHeap<T> {
 
     // ── Internal entry ───────────────────────────────────────────────────────

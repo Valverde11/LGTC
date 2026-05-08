@@ -1,15 +1,6 @@
-package logistec.util;
+package util;
 
-/**
- * Generic LIFO Stack backed by {@link LinkedList}.
- * Used by DFS and other algorithms.
- *
- * <p>All operations O(1).
- *
- * @param <T> element type
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class Stack<T> {
 
     private final LinkedList<T> list = new LinkedList<>();

@@ -1,11 +1,6 @@
-package logistec.graph;
+package graph;
 
-/**
- * Represents a delivery package in the LogísTEC system.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class Parcel {
 
     public enum Status { PENDING, ASSIGNED, REJECTED }

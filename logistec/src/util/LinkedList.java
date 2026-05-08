@@ -1,23 +1,8 @@
-package logistec.util;
+package util;
 
 import java.util.Iterator;
 
-/**
- * Generic singly linked list (TDA Lista Enlazada).
- * Used throughout the project as the base collection —
- * replaces java.util.ArrayList / LinkedList.
- *
- * <p>Complexity:
- * <ul>
- *   <li>addFirst / addLast / removeFirst – O(1)</li>
- *   <li>get(i) / remove(i) – O(n)</li>
- *   <li>contains / indexOf – O(n)</li>
- * </ul>
- *
- * @param <T> element type
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class LinkedList<T> implements Iterable<T> {
 
     // ── Node ────────────────────────────────────────────────────────────────

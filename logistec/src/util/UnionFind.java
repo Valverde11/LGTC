@@ -1,16 +1,6 @@
-package logistec.util;
+package util;
 
-/**
- * Union-Find (Disjoint Set Union) data structure.
- * <p>
- * Implements path compression and union by rank for nearly O(1) amortized
- * operations. Required by Kruskal's MST algorithm.
- *
- * <p>Complexity (amortized per operation): O(α(n)) ≈ O(1).
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class UnionFind {
 
     private final int[] parent;

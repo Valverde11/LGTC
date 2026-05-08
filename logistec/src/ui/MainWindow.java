@@ -1,30 +1,16 @@
-package logistec.ui;
+package ui;
 
-import logistec.algorithms.*;
-import logistec.graph.*;
-import logistec.io.*;
-import logistec.planner.Planner;
-import logistec.util.LinkedList;
+import algorithms.*;
+import graph.*;
+import io.*;
+import planner.Planner;
+import util.LinkedList;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.io.File;
 
-/**
- * Main Swing window for the LogísTEC application.
- *
- * <p>Provides:
- * <ul>
- *   <li>File chooser to load a JSON case.</li>
- *   <li>Graph visualization panel.</li>
- *   <li>Shortest path query (Dijkstra).</li>
- *   <li>Report panel showing the full text report.</li>
- * </ul>
- *
- * @author LogísTEC Team
- * @version 1.0
- */
 public class MainWindow extends JFrame {
 
     // ── State ─────────────────────────────────────────────────────────────

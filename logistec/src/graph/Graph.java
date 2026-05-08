@@ -1,18 +1,8 @@
-package logistec.graph;
+package graph;
 
-import logistec.util.LinkedList;
+import util.LinkedList;
 
-/**
- * TDA Grafo no dirigido ponderado con representación por lista de adyacencia.
- *
- * <p>Internally, vertices are stored by index (0..n-1) and identified by their
- * String id via an array-based lookup. This avoids using any java.util maps.
- *
- * <p>Space: O(V + E).
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class Graph {
 
     // ── Adjacency list entry ──────────────────────────────────────────────────

@@ -1,29 +1,12 @@
-package logistec.io;
+package io;
 
-import logistec.graph.*;
-import logistec.io.JsonParser.*;
-import logistec.util.LinkedList;
+import graph.*;
+import io.JsonParser.*;
+import util.LinkedList;
 
 import java.io.IOException;
 
-/**
- * Loads a LogísTEC configuration JSON file and builds the domain objects.
- *
- * <p>Expected JSON schema:
- * <pre>
- * {
- *   "ciudad": {
- *     "vertices": [{"id":"A","tipo":"DEPOT","x":100,"y":100}, ...],
- *     "aristas":  [{"u":"A","v":"B","distancia":320}, ...]
- *   },
- *   "paquetes": [{"id":"P01","destino":"G","peso":5,"prioridad":1}, ...],
- *   "camiones": [{"id":"C01","capacidad":50}, ...]
- * }
- * </pre>
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class CityLoader {
 
     private Graph               graph;

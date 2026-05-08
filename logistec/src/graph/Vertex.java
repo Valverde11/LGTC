@@ -1,11 +1,4 @@
-package logistec.graph;
-
-/**
- * Represents a vertex (intersection or point of interest) in the city graph.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+package graph;
 public class Vertex {
 
     /** Possible types of vertex in the city. */

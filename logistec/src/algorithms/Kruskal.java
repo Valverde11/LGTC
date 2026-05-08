@@ -1,21 +1,10 @@
-package logistec.algorithms;
+package algorithms;
 
-import logistec.graph.Edge;
-import logistec.graph.Graph;
-import logistec.util.LinkedList;
-import logistec.util.UnionFind;
+import graph.Edge;
+import graph.Graph;
+import util.LinkedList;
+import util.UnionFind;
 
-/**
- * Kruskal's Minimum Spanning Tree algorithm.
- *
- * <p>Processes edges in non-decreasing weight order, adding each one that
- * would not create a cycle (detected via Union-Find).
- *
- * <p>Complexity: O(E log E) — dominated by the initial edge sort.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
 public class Kruskal {
 
     private final LinkedList<Edge> mstEdges;

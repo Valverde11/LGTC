@@ -1,4 +1,4 @@
-package logistec.graph;
+package graph;
 
 /**
  * Represents an undirected weighted edge (street) in the city graph.

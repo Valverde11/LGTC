@@ -1,16 +1,9 @@
-package logistec.io;
+package io;
 
 import java.io.*;
 import java.nio.file.*;
 
-/**
- * Minimal JSON parser for LogísTEC configuration files.
- * Handles the specific schema defined in the project spec.
- * No external libraries required.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class JsonParser {
 
     private final String src;

@@ -1,21 +1,9 @@
-package logistec.algorithms;
+package algorithms;
 
-import logistec.graph.Graph;
-import logistec.util.LinkedList;
-import logistec.util.MinHeap;
+import graph.Graph;
+import util.LinkedList;
+import util.MinHeap;
 
-/**
- * Dijkstra's single-source shortest path algorithm.
- *
- * <p>Computes minimum distances from a source vertex to all others in a
- * non-negative weighted graph. Uses the custom {@link MinHeap} priority queue
- * as required by the project spec (no java.util.PriorityQueue).
- *
- * <p>Complexity: O((V + E) log V) with a binary heap.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
 public class Dijkstra {
 
     private static final int INF = Integer.MAX_VALUE / 2;
@@ -25,12 +13,7 @@ public class Dijkstra {
     private final int     src;
     private final int     V;
 
-    /**
-     * Run Dijkstra from {@code src} on graph {@code g}.
-     *
-     * @param g   the graph (undirected, non-negative weights)
-     * @param src source vertex index
-     */
+    
     public Dijkstra(Graph g, int src) {
         this.src  = src;
         this.V    = g.numVertices();

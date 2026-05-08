@@ -1,13 +1,7 @@
-package logistec.graph;
+package graph;
 
-import logistec.util.LinkedList;
+import util.LinkedList;
 
-/**
- * Represents a delivery truck in the LogísTEC fleet.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
 public class Truck {
 
     private final String id;

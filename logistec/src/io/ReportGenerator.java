@@ -1,15 +1,10 @@
-package logistec.io;
+package io;
 
-import logistec.algorithms.*;
-import logistec.graph.*;
-import logistec.util.LinkedList;
+import algorithms.*;
+import graph.*;
+import util.LinkedList;
 
-/**
- * Generates the final human-readable report for a LogísTEC run.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class ReportGenerator {
 
     private final Graph         graph;

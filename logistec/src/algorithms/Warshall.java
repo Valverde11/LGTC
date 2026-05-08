@@ -1,28 +1,14 @@
-package logistec.algorithms;
+package algorithms;
 
-import logistec.graph.Graph;
+import graph.Graph;
 
-/**
- * Warshall's algorithm for computing the transitive closure of a graph.
- *
- * <p>Determines reachability between all pairs of vertices.
- * Used to validate whether delivery destinations are reachable from the depot.
- *
- * <p>Complexity: O(V³).
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class Warshall {
 
     private final boolean[][] reach;
     private final int         V;
 
-    /**
-     * Run Warshall on graph {@code g} and store the reachability matrix.
-     *
-     * @param g the input graph
-     */
+  
     public Warshall(Graph g) {
         this.V     = g.numVertices();
         this.reach = g.booleanMatrix();  // initial: edge(i,j) → true, i==j → true

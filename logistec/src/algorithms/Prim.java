@@ -1,21 +1,11 @@
-package logistec.algorithms;
+package algorithms;
 
-import logistec.graph.Edge;
-import logistec.graph.Graph;
-import logistec.util.LinkedList;
-import logistec.util.MinHeap;
+import graph.Edge;
+import graph.Graph;
+import util.LinkedList;
+import util.MinHeap;
 
-/**
- * Prim's Minimum Spanning Tree algorithm.
- *
- * <p>Grows the MST vertex by vertex, always adding the cheapest edge that
- * connects a vertex inside the tree to one outside.
- *
- * <p>Complexity: O((V + E) log V) using a binary min-heap.
- *
- * @author LogísTEC Team
- * @version 1.0
- */
+
 public class Prim {
 
     private static final int INF = Integer.MAX_VALUE / 2;

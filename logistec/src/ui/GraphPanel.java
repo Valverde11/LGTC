@@ -1,8 +1,8 @@
-package logistec.ui;
+package ui;
 
-import logistec.algorithms.Prim;
-import logistec.graph.*;
-import logistec.util.LinkedList;
+import algorithms.Prim;
+import graph.*;
+import util.LinkedList;
 
 import javax.swing.*;
 import java.awt.*;
