@@ -1,0 +1,65 @@
+package graph;
+
+import util.LinkedList;
+
+public class Truck {
+
+    private final String id;
+    private final int    capacity;     // max load in kg
+    private int          currentLoad;  // current load in kg
+
+    private final LinkedList<Parcel> packages  = new LinkedList<>();
+    private       LinkedList<Integer> route     = new LinkedList<>(); // vertex indices
+    private       int                 routeDistanceNN  = 0;
+    private       int                 routeDistanceMST = 0;
+
+    public Truck(String id, int capacity) {
+        this.id       = id;
+        this.capacity = capacity;
+    }
+
+    // ── Accessors ──────────────────────────────────────────────────────────
+
+    public String  getId()           { return id; }
+    public int     getCapacity()     { return capacity; }
+    public int     getCurrentLoad()  { return currentLoad; }
+    public int     getFreeCapacity() { return capacity - currentLoad; }
+
+    public LinkedList<Parcel> getPackages()  { return packages; }
+    public LinkedList<Integer> getRoute()     { return route; }
+
+    public int  getRouteDistanceNN()  { return routeDistanceNN; }
+    public int  getRouteDistanceMST() { return routeDistanceMST; }
+    public void setRouteDistanceNN(int d)  { routeDistanceNN  = d; }
+    public void setRouteDistanceMST(int d) { routeDistanceMST = d; }
+    public void setRoute(LinkedList<Integer> r) { route = r; }
+
+    // ── Operations ─────────────────────────────────────────────────────────
+
+    /**
+     * Add a package to this truck. Increases current load.
+     */
+    public boolean addPackage(Parcel p) {
+        if (currentLoad + p.getWeight() > capacity) return false;
+        packages.addLast(p);
+        currentLoad += p.getWeight();
+        p.assign(id);
+        return true;
+    }
+
+    /** True if this package can fit without exceeding capacity. */
+    public boolean canFit(Parcel p) {
+        return currentLoad + p.getWeight() <= capacity;
+    }
+
+    /** Percentage of capacity in use. */
+    public double occupancyPercent() {
+        return 100.0 * currentLoad / capacity;
+    }
+
+    @Override
+    public String toString() {
+        return "Truck{id='" + id + "', capacity=" + capacity
+             + "kg, load=" + currentLoad + "kg}";
+    }
+}
