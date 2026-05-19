@@ -4,7 +4,27 @@ import algorithms.*;
 import graph.*;
 import util.LinkedList;
 
-
+/**
+ * LogísTEC Planner — orchestrates package assignment and route planning.
+ *
+ * <h2>Parcel assignment (Best-Fit heuristic)</h2>
+ * <ol>
+ *   <li>Sort packages by priority ASC, then weight DESC.</li>
+ *   <li>For each package, assign to the truck with maximum free capacity that
+ *       can still accommodate it.</li>
+ *   <li>If no truck can fit it, mark the package as rejected.</li>
+ * </ol>
+ *
+ * <h2>Route planning</h2>
+ * <p>Two heuristics are applied per truck and the better result is selected:
+ * <ul>
+ *   <li><b>Nearest Neighbor (NN)</b> – greedy, O(n²).</li>
+ *   <li><b>MST-based</b> – build MST on stop sub-graph, DFS pre-order, O(n² + n log n).</li>
+ * </ul>
+ *
+ * @author LogísTEC Team
+ * @version 1.0
+ */
 public class Planner {
 
     private final Graph         graph;
@@ -155,6 +175,17 @@ public class Planner {
         LinkedList<Integer> bestList = new LinkedList<>();
         for (int v : best) bestList.addLast(v);
         truck.setRoute(bestList);
+
+        // Build expanded route: replace each hop with the actual street path
+        LinkedList<Integer> expanded = new LinkedList<>();
+        for (int s = 0; s < best.length - 1; s++) {
+            int[] path = fw.reconstructPath(best[s], best[s + 1]);
+            if (path == null) continue;
+            for (int pi = 0; pi < path.length - 1; pi++) // skip last to avoid duplicates
+                expanded.addLast(path[pi]);
+        }
+        expanded.addLast(best[best.length - 1]); // add final depot
+        truck.setExpandedRoute(expanded);
     }
 
     // ── Nearest Neighbor ─────────────────────────────────────────────────────

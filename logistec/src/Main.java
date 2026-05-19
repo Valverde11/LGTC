@@ -1,4 +1,5 @@
 
+
 import algorithms.*;
 import graph.*;
 import io.*;
@@ -39,7 +40,7 @@ public class Main {
         CityLoader loader = new CityLoader();
         loader.load(jsonPath);
         Graph               graph    = loader.getGraph();
-        LinkedList<Parcel> packages = loader.getPackages();
+        LinkedList<Parcel> packages = loader.getParcels();
         LinkedList<Truck>   trucks   = loader.getTrucks();
 
         System.out.println(graph);
