@@ -10,7 +10,7 @@ set -e
 
 SRC_DIR="src"
 OUT_DIR="out"
-MAIN_CLASS="logistec.Main"
+MAIN_CLASS="Main"
 JAR="logistec.jar"
 
 echo "══ LogísTEC Build ══════════════════════════════════════════"
@@ -19,6 +19,8 @@ echo "  Java: $(java -version 2>&1 | head -1)"
 SOURCES=$(find "$SRC_DIR" -name "*.java" | tr '\n' ' ')
 
 mkdir -p "$OUT_DIR"
+rm -f "$JAR"
+rm -rf "$OUT_DIR"/*
 echo "  Compiling..."
 javac -d "$OUT_DIR" --source-path "$SRC_DIR" $SOURCES
 echo "  Compilation successful."
