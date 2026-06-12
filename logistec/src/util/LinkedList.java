@@ -10,7 +10,7 @@ import java.util.Iterator;
  * y como lista de adyacencia del grafo.
  *
  * @param <T> Tipo de los elementos almacenados.
- * @author LogísTEC Team
+ * @author Emmanuel Rojas
  * @version 1.0
  */
 public class LinkedList<T> implements Iterable<T> {

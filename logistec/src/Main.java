@@ -17,7 +17,7 @@ import util.LinkedList;
  *   <li>{@code java -jar logistec.jar <file>}  — Runs headless on the given JSON and prints the report.</li>
  * </ul>
  *
- * @author LogísTEC Team
+ * @author Emmanuel Rojas
  * @version 1.0
  */
 public class Main {

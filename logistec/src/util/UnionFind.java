@@ -7,7 +7,7 @@ package util;
  * <p>Complejidad amortizada: O(α(n)) por operación, donde α es la
  * función inversa de Ackermann (prácticamente O(1) para cualquier n real).
  *
- * @author LogísTEC Team
+ * @author Emmanuel Rojas
  * @version 1.0
  */
 public class UnionFind {

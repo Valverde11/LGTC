@@ -9,7 +9,7 @@ package util;
  * <p>Invariante del heap: {@code key[padre] <= key[hijo]} para todo nodo.
  *
  * @param <T> Tipo de los elementos almacenados.
- * @author LogísTEC Team
+ * @author Emmanuel Rojas
  * @version 1.0
  */
 public class MinHeap<T> {

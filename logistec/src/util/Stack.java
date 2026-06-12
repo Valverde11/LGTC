@@ -7,7 +7,7 @@ package util;
  * <p>Todas las operaciones son O(1).
  *
  * @param <T> Tipo de los elementos almacenados en la pila.
- * @author LogísTEC Team
+ * @author Emmanuel Rojas
  * @version 1.0
  */
 public class Stack<T> {
