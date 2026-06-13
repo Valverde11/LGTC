@@ -62,9 +62,7 @@ public class Kruskal {
         elapsedNano = System.nanoTime() - start;
     }
 
-    // =========================================================================
-    // MERGE SORT PROPIO — O(E log E)
-    // =========================================================================
+
 
     /**
      * Ordena el subarreglo {@code arr[lo..hi]} por peso ascendente usando merge sort.
@@ -106,9 +104,7 @@ public class Kruskal {
         System.arraycopy(tmp, 0, arr, lo, tmp.length);
     }
 
-    // =========================================================================
-    // GETTERS DE RESULTADO
-    // =========================================================================
+
 
     /**
      * Retorna las aristas del MST. @return Lista de aristas del MST.

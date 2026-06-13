@@ -36,9 +36,9 @@ public class Planner {
         this.depotIdx = graph.getDepotIndex(); // guardamos el índice del depósito
     }
 
-    // =========================================================================
-    // FASE 1: VALIDACIÓN DE ALCANZABILIDAD
-    // =========================================================================
+    
+    // FASE 1: Validación de alcanzabilidad
+    
 
     /**
      * Marca como REJECTED los paquetes cuyo destino no sea alcanzable desde el depósito.
@@ -59,9 +59,8 @@ public class Planner {
         return unreachable;
     }
 
-    // =========================================================================
-    // FASE 2: ASIGNACIÓN DE PAQUETES (Best-Fit)
-    // =========================================================================
+
+    // FASE 2: Asignación de paquetes 
 
     /**
      * Asigna paquetes PENDING a camiones usando la heurística Best-Fit.
@@ -105,9 +104,8 @@ public class Planner {
         return rejected;
     }
 
-    // 
-    // FASE 3: PLANIFICACIÓN DE RUTAS
-    // 
+    
+    // FASE 3: Planificación de rutas
 
     /**
      * Calcula la ruta de cada camión comparando NN y MST-based y eligiendo la mejor.
@@ -179,9 +177,7 @@ public class Planner {
         truck.setExpandedRoute(expanded);
     }
 
-    // =========================================================================
-    // HEURÍSTICA 1: NEAREST NEIGHBOR (Vecino más cercano) — O(n²)
-    // =========================================================================
+    // HEURÍSTICA 1: Vecino más cercano 
 
     /**
      * Desde el depósito, en cada paso visita la parada no visitada más cercana.
@@ -222,9 +218,8 @@ public class Planner {
         return route;
     }
 
-    // =========================================================================
-    // HEURÍSTICA 2: MST-BASED (2-aproximación) — O(n² + n log n)
-    // =========================================================================
+    
+    // HEURÍSTICA 2: MST-BASED 
 
     /**
      * Construye el MST del subgrafo {depósito + paradas} con distancias FW,
@@ -277,9 +272,9 @@ public class Planner {
         return route;
     }
 
-    // =========================================================================
-    // AUXILIAR: DISTANCIA TOTAL DE UNA RUTA
-    // =========================================================================
+    
+    // AUXILIAR: Distancia total de una ruta
+
 
     /**
      * Suma las distancias mínimas (Floyd-Warshall) entre pares consecutivos de la ruta.
@@ -297,9 +292,8 @@ public class Planner {
         return total;
     }
 
-    // =========================================================================
-    // AUXILIAR: ORDENAMIENTO DE PAQUETES PARA BEST-FIT
-    // =========================================================================
+
+    // AUXILIAR: Ordenamiento de paquetes para Best-Fit
 
     /**
      * Copia los paquetes a un arreglo y los ordena con insertion sort
